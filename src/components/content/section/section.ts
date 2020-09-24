@@ -23,14 +23,33 @@ import { LitElement, html, customElement, property, css } from 'lit-element';
 @customElement('my-section')
 export class MySection extends LitElement {
     static styles = css`
+        :host {
+            display: flex;
+            flex-direction: column; 
+        }    
+    `;
 
-  `;
-
-    @property({ type: String }) title = '';
+    @property({ type: String }) title: string = '';
+    @property({ type: String }) description: string = '';
+    @property({ type: Array }) list: Array<string> = [];
 
     render() {
-        return html`<div>
-            <h1>${this.title}</h1>
+        return html`<div class="wrapper">
+            <h1 class="title">${this.title}</h1>
+            
+            ${this.description
+                ? html`<p class="description">${this.description}</p>`
+                : html``
+            }
+            
+            <ul class="list">
+                ${this.list.length !== 0
+                    ? this.list.map(item => html`<li class="list-item">${item}</li>`)
+                    : html``
+                }
+            </ul>        
+            
+            <slot></slot>    
         </div>`;
     }
 }

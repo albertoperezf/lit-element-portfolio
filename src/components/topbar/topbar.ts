@@ -30,7 +30,6 @@ export class TopBar extends LitElement {
     .images {
         display: flex;
         width: 30%;
-        padding-left: 20px;
         justify-content: flex-start;
         align-item: center;
         margin: 10px;
@@ -54,6 +53,14 @@ export class TopBar extends LitElement {
         color: white;
         margin-right: 10px;
     }
+    
+    .title {
+        color: white; 
+        margin: 0 0 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
   `;
 
     @query('#wrapper') _wrapper: HTMLElement;
@@ -66,6 +73,8 @@ export class TopBar extends LitElement {
           <div class="wrapper" id="wrapper">
             <div class="images">
                 <img class="image" id="img" src="${this.imgSrc}" alt="">
+                
+                <p class="title">${this.name}</p>
             </div>
                 
             <my-links class="links">
@@ -75,10 +84,6 @@ export class TopBar extends LitElement {
             </my-links>
           </div>
     `;
-    }
-
-    foo(): string {
-        return 'foo';
     }
 }
 

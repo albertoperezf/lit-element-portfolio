@@ -28,19 +28,42 @@ let MySection = class MySection extends LitElement {
     constructor() {
         super(...arguments);
         this.title = '';
+        this.description = '';
+        this.list = [];
     }
     render() {
-        return html `<div>
-            <h1>${this.title}</h1>
+        return html `<div class="wrapper">
+            <h1 class="title">${this.title}</h1>
+            
+            ${this.description
+            ? html `<p class="description">${this.description}</p>`
+            : html ``}
+            
+            <ul class="list">
+                ${this.list.length !== 0
+            ? this.list.map(item => html `<li class="list-item">${item}</li>`)
+            : html ``}
+            </ul>        
+            
+            <slot></slot>    
         </div>`;
     }
 };
 MySection.styles = css `
-
-  `;
+        :host {
+            display: flex;
+            flex-direction: column; 
+        }    
+    `;
 __decorate([
     property({ type: String })
 ], MySection.prototype, "title", void 0);
+__decorate([
+    property({ type: String })
+], MySection.prototype, "description", void 0);
+__decorate([
+    property({ type: Array })
+], MySection.prototype, "list", void 0);
 MySection = __decorate([
     customElement('my-section')
 ], MySection);

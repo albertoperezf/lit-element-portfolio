@@ -25,6 +25,8 @@ let TopBar = class TopBar extends LitElement {
           <div class="wrapper" id="wrapper">
             <div class="images">
                 <img class="image" id="img" src="${this.imgSrc}" alt="">
+                
+                <p class="title">${this.name}</p>
             </div>
                 
             <my-links class="links">
@@ -34,9 +36,6 @@ let TopBar = class TopBar extends LitElement {
             </my-links>
           </div>
     `;
-    }
-    foo() {
-        return 'foo';
     }
 };
 TopBar.styles = css `
@@ -58,7 +57,6 @@ TopBar.styles = css `
     .images {
         display: flex;
         width: 30%;
-        padding-left: 20px;
         justify-content: flex-start;
         align-item: center;
         margin: 10px;
@@ -81,6 +79,14 @@ TopBar.styles = css `
     .link {
         color: white;
         margin-right: 10px;
+    }
+    
+    .title {
+        color: white; 
+        margin: 0 0 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
   `;
 __decorate([

@@ -13,7 +13,6 @@ export declare class TopBar extends LitElement {
     name: string;
     imgSrc: string;
     render(): import("lit-element").TemplateResult;
-    foo(): string;
 }
 declare global {
     interface HTMLElementTagNameMap {

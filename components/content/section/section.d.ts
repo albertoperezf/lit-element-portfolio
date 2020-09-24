@@ -21,6 +21,8 @@ import { LitElement } from 'lit-element';
 export declare class MySection extends LitElement {
     static styles: import("lit-element").CSSResult;
     title: string;
+    description: string;
+    list: Array<string>;
     render(): import("lit-element").TemplateResult;
 }
 declare global {

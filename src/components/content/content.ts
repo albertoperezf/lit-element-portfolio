@@ -1,18 +1,5 @@
-/**
- * @license
- * Copyright (c) 2019 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at
- * http://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at
- * http://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at
- * http://polymer.github.io/CONTRIBUTORS.txt
- * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at
- * http://polymer.github.io/PATENTS.txt
- */
-
 import { LitElement, html, customElement, property, css } from 'lit-element';
+import './section/section';
 
 /**
  * An example element.
@@ -27,18 +14,21 @@ export class MyContent extends LitElement {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         max-width: 100%;
         height: calc(100vh - 60px);
         font-family: 'Roboto', sans-serif;
+        margin: 0 10px;
     }
   `;
+
+    static description = 'Computer Engineer and Frontend Developer with more than four (4) years of experience working on agile development projects for web applications or mobile web applications using technologies like: HTML5, CSS3, SASS, LESS, PostCSS, Javascript, ES6, React, Angular, Meteor, Babel, Webpack, etc. Currently working on Bankia related projects using React architecture.';
 
     @property({ type: String }) name: string = 'Alberto Perez';
 
     render() {
         return html`<div class="wrapper">
-            <h1 class="title">${this.name}</h1>
+            <my-section description="${MyContent.description}" title="Resume" />
         </div>`;
     }
 }
