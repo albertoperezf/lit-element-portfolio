@@ -24,7 +24,7 @@ export class MyContent extends LitElement {
 
     static description = 'Computer Engineer and Frontend Developer with more than four (4) years of experience working on agile development projects for web applications or mobile web applications using technologies like: HTML5, CSS3, SASS, LESS, PostCSS, Javascript, ES6, React, Angular, Meteor, Babel, Webpack, etc. Currently working on Bankia related projects using React architecture.';
 
-    @property({ type: String }) name: string = 'Alberto Perez';
+    @property({ type: String }) name: string = 'Alberto Perez Faria';
 
     render() {
         return html`<div class="wrapper">

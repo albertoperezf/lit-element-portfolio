@@ -1,5 +1,4 @@
 import { LitElement, html, customElement, property, css } from 'lit-element';
-import { query } from 'lit-element/lib/decorators.js';
 import '../links/links';
 import '../link/link';
 
@@ -62,8 +61,6 @@ export class TopBar extends LitElement {
         align-items: center;
     }
   `;
-
-    @query('#wrapper') _wrapper: HTMLElement;
 
     @property({ type: String }) name = 'Alberto Perez';
     @property({ type: String }) imgSrc = 'https://picsum.photos/60/60?grayscale';

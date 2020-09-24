@@ -1,4 +1,4 @@
-import { LitElement, html, customElement, property, css } from 'lit-element';
+import { LitElement, html, customElement, css } from 'lit-element';
 
 /**
  * An example element.
@@ -39,21 +39,17 @@ export class MyFooter extends LitElement {
     }
   `;
 
-    private title() {
-        return html`<div class="wrapper">
-            <h1 class="title">® Alberto Perez, 2020</h1>
-        </div>`;
-    }
-
     render() {
         return html`
             <my-links class="links">
                 <my-link class="link" slot="one" title="Github" url="https://github.com/albertoperezf"></my-link>
                 <my-link class="link" slot="two" title="StackOverflow" url="https://stackoverflow.com/users/6450931/alberto-perez"></my-link>
                 <my-link class="link" slot="three" title="LinkedIn" url="https://www.linkedin.com/in/albertojpf/"></my-link>
-           </my-links>
+            </my-links>
       
-            ${this.title()}
+            <div class="wrapper">
+                <h1 class="title">® Alberto Perez, 2020</h1>
+            </div>
         `;
     }
 }

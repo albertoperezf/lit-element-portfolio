@@ -1,0 +1,1 @@
+{"version":3,"file":"app-main.d.ts","sourceRoot":"","sources":["../../src/components/app-main/app-main.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAuB,MAAM,aAAa,CAAC;AAG9D,qBAEa,IAAK,SAAQ,UAAU;IAChC,MAAM;CAKT;AAED,OAAO,CAAC,MAAM,CAAC;IACX,UAAU,qBAAqB;QAC3B,UAAU,EAAE,IAAI,CAAC;KACpB;CACJ"}

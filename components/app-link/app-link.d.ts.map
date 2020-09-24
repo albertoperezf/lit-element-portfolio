@@ -1,0 +1,1 @@
+{"version":3,"file":"app-link.d.ts","sourceRoot":"","sources":["../../src/components/app-link/app-link.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAsC,MAAM,aAAa,CAAC;AAG7E,qBAEa,IAAK,SAAQ,UAAU;IAChC,MAAM,CAAC,MAAM,kCAIb;IAE4B,IAAI,EAAE,MAAM,CAAM;IAE9C,MAAM;IAQN,SAAS,CAAC,KAAK,EAAE,UAAU;CAK9B;AAED,OAAO,CAAC,MAAM,CAAC;IACX,UAAU,qBAAqB;QAC3B,UAAU,EAAE,IAAI,CAAC;KACpB;CACJ"}

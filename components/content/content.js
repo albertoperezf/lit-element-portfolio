@@ -16,7 +16,7 @@ import './section/section';
 let MyContent = MyContent_1 = class MyContent extends LitElement {
     constructor() {
         super(...arguments);
-        this.name = 'Alberto Perez';
+        this.name = 'Alberto Perez Faria';
     }
     render() {
         return html `<div class="wrapper">

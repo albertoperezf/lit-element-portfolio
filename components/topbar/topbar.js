@@ -5,7 +5,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { LitElement, html, customElement, property, css } from 'lit-element';
-import { query } from 'lit-element/lib/decorators.js';
 import '../links/links';
 import '../link/link';
 /**
@@ -89,9 +88,6 @@ TopBar.styles = css `
         align-items: center;
     }
   `;
-__decorate([
-    query('#wrapper')
-], TopBar.prototype, "_wrapper", void 0);
 __decorate([
     property({ type: String })
 ], TopBar.prototype, "name", void 0);

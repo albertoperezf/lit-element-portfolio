@@ -12,9 +12,9 @@ export class MyLinks extends LitElement {
             justify-content: center;
             align-items: center;
         }
-  `;
+    `;
 
-    @property({ type: String }) class: string;
+    @property({ type: String }) class: string = '';
 
     render() {
         return html`
