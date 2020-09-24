@@ -12,24 +12,46 @@ export class MyFooter extends LitElement {
     static styles = css`
     :host {
       display: flex;
-      flex-direction: row;
-      border: solid 2px gray;
+      flex-direction: column;
       height: 80px;
       max-width: 100%;
+      background-image: linear-gradient(to right, #b5cc2d, #72b89b 100%);
+      font-family: 'Roboto', sans-serif;
+    }
+    
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 40%;
+    }
+    
+    .title {
+        margin: 0;
+        font-family: 'Roboto bold', sans-serif;
+        font-size: 14px;
+        color: white;
+    }
+    
+    .links {
+        height: 60%;
     }
   `;
 
     private title() {
-        return html`<h1>® Alberto Perez, 2020</h1>`;
-    }
-
-    private slot() {
-        return html`<slot name="one-footer"></slot>`;
+        return html`<div class="wrapper">
+            <h1 class="title">® Alberto Perez, 2020</h1>
+        </div>`;
     }
 
     render() {
         return html`
-            ${this.slot()}
+            <my-links class="links">
+                <my-link class="link" slot="one" title="Github" url="https://github.com/albertoperezf"></my-link>
+                <my-link class="link" slot="two" title="StackOverflow" url="https://stackoverflow.com/users/6450931/alberto-perez"></my-link>
+                <my-link class="link" slot="three" title="LinkedIn" url="https://www.linkedin.com/in/albertojpf/"></my-link>
+           </my-links>
       
             ${this.title()}
         `;

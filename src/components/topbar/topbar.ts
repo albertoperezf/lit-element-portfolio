@@ -18,6 +18,7 @@ export class TopBar extends LitElement {
         flex-direction: row;
         height: 60px;
         background-image: linear-gradient(to right, #b5cc2d, #72b89b 100%);
+        font-family: 'Roboto', sans-serif;
     }
     
     .wrapper {

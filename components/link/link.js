@@ -44,6 +44,7 @@ MyLink.styles = css `
         .link {
             color: white;
             text-decoration: none;
+            margin-right: 10px;
         }
   `;
 __decorate([

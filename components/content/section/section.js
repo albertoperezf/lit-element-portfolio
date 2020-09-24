@@ -24,33 +24,25 @@ import { LitElement, html, customElement, property, css } from 'lit-element';
  * @slot - This element has a slot
  * @csspart button - The button
  */
-let MyContent = class MyContent extends LitElement {
+let MySection = class MySection extends LitElement {
     constructor() {
         super(...arguments);
-        this.name = 'Alberto Perez';
+        this.title = '';
     }
     render() {
-        return html `<div class="wrapper">
-            <h1 class="title">${this.name}</h1>
+        return html `<div>
+            <h1>${this.title}</h1>
         </div>`;
     }
 };
-MyContent.styles = css `
-    :host {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        max-width: 100%;
-        height: calc(100vh - 60px);
-        font-family: 'Roboto', sans-serif;
-    }
+MySection.styles = css `
+
   `;
 __decorate([
     property({ type: String })
-], MyContent.prototype, "name", void 0);
-MyContent = __decorate([
-    customElement('my-content')
-], MyContent);
-export { MyContent };
-//# sourceMappingURL=content.js.map
+], MySection.prototype, "title", void 0);
+MySection = __decorate([
+    customElement('my-section')
+], MySection);
+export { MySection };
+//# sourceMappingURL=section.js.map

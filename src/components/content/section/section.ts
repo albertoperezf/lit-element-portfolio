@@ -20,32 +20,23 @@ import { LitElement, html, customElement, property, css } from 'lit-element';
  * @slot - This element has a slot
  * @csspart button - The button
  */
-@customElement('my-link')
-export class MyLink extends LitElement {
+@customElement('my-section')
+export class MySection extends LitElement {
     static styles = css`
-        li {
-            list-style: none;
-        }
-        
-        .link {
-            color: white;
-            text-decoration: none;
-            margin-right: 10px;
-        }
+
   `;
 
-    @property({ type: String }) url = '';
     @property({ type: String }) title = '';
 
     render() {
-        return html`
-            <li><a class="link" href="${this.url}">${this.title}</a></li>
-    `;
+        return html`<div>
+            <h1>${this.title}</h1>
+        </div>`;
     }
 }
 
 declare global {
     interface HTMLElementTagNameMap {
-        'my-link': MyLink;
+        'my-section': MySection;
     }
 }

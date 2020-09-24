@@ -20,17 +20,8 @@ import { LitElement } from 'lit-element';
  */
 export declare class MyContent extends LitElement {
     static styles: import("lit-element").CSSResult;
-    /**
-     * The name to say "Hello" to.
-     */
     name: string;
-    /**
-     * The number of times the button has been clicked.
-     */
-    count: number;
     render(): import("lit-element").TemplateResult;
-    private _onClick;
-    foo(): string;
 }
 declare global {
     interface HTMLElementTagNameMap {

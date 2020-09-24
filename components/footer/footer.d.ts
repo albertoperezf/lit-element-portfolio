@@ -8,7 +8,6 @@ import { LitElement } from 'lit-element';
 export declare class MyFooter extends LitElement {
     static styles: import("lit-element").CSSResult;
     private title;
-    private slot;
     render(): import("lit-element").TemplateResult;
 }
 declare global {

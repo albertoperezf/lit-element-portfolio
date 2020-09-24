@@ -3,6 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>LitElement Portfolio</title>
+        <!-- Fuentes -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,700&display=swap" rel="stylesheet">
 
         <style>
             body {
@@ -10,6 +12,7 @@
                 display: flex;
                 flex-direction: column;
                 margin: 0;
+                font-family: 'Roboto', sans-serif;
             }
         </style>
 
@@ -26,14 +29,6 @@
 
         <my-content></my-content>
 
-        <my-footer>
-            <my-links slot="one-footer">
-                <li slot="one"><a href="https://github.com/albertoperezf">GitHub</a></li>
-                <li slot="two">
-                    <a href="https://stackoverflow.com/users/6450931/alberto-perez">StackOverflow</a>
-                </li>
-                <li slot="three"><a href="https://www.linkedin.com/in/albertojpf/">Linkedin</a></li>
-            </my-links>
-        </my-footer>
+        <my-footer></my-footer>
     </body>
 </html>

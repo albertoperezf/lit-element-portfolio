@@ -24,37 +24,22 @@ import { LitElement, html, customElement, property, css } from 'lit-element';
 export class MyContent extends LitElement {
     static styles = css`
     :host {
-      display: flex;
-      flex-direction: row;
-      border: solid 2px gray;
-      max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        height: calc(100vh - 60px);
+        font-family: 'Roboto', sans-serif;
     }
   `;
 
-    /**
-     * The name to say "Hello" to.
-     */
-    @property()
-    name = 'Alberto';
-
-    /**
-     * The number of times the button has been clicked.
-     */
-    @property({type: Number})
-    count = 0;
+    @property({ type: String }) name: string = 'Alberto Perez';
 
     render() {
-        return html`
-      <h1>Content</h1>
-    `;
-    }
-
-    private _onClick() {
-        this.count++;
-    }
-
-    foo(): string {
-        return 'foo';
+        return html`<div class="wrapper">
+            <h1 class="title">${this.name}</h1>
+        </div>`;
     }
 }
 

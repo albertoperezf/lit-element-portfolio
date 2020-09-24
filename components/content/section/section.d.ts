@@ -11,41 +11,21 @@
  * subject to an additional IP rights grant found at
  * http://polymer.github.io/PATENTS.txt
  */
-
-import { LitElement, html, customElement, property, css } from 'lit-element';
-
+import { LitElement } from 'lit-element';
 /**
  * An example element.
  *
  * @slot - This element has a slot
  * @csspart button - The button
  */
-@customElement('my-link')
-export class MyLink extends LitElement {
-    static styles = css`
-        li {
-            list-style: none;
-        }
-        
-        .link {
-            color: white;
-            text-decoration: none;
-            margin-right: 10px;
-        }
-  `;
-
-    @property({ type: String }) url = '';
-    @property({ type: String }) title = '';
-
-    render() {
-        return html`
-            <li><a class="link" href="${this.url}">${this.title}</a></li>
-    `;
-    }
+export declare class MySection extends LitElement {
+    static styles: import("lit-element").CSSResult;
+    title: string;
+    render(): import("lit-element").TemplateResult;
 }
-
 declare global {
     interface HTMLElementTagNameMap {
-        'my-link': MyLink;
+        'my-section': MySection;
     }
 }
+//# sourceMappingURL=section.d.ts.map
