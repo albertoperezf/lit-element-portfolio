@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>LitElement Portfolio</title>
+
+        <style>
+            body {
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+            }
+        </style>
+
+        <!-- Componentes -->
+        <script type="module" src="../components/content/content.js"></script>
+        <script type="module" src="../components/footer/footer.js"></script>
+        <script type="module" src="../components/links/links.js"></script>
+        <script type="module" src="../components/topbar/topbar.js"></script>
+        <script type="module" src="../my-element.js"></script>
+    </head>
+
+    <body>
+        <top-bar></top-bar>
+
+        <my-content></my-content>
+
+        <my-footer>
+            <my-links slot="one-footer">
+                <li slot="one"><a href="https://github.com/albertoperezf">GitHub</a></li>
+                <li slot="two">
+                    <a href="https://stackoverflow.com/users/6450931/alberto-perez">StackOverflow</a>
+                </li>
+                <li slot="three"><a href="https://www.linkedin.com/in/albertojpf/">Linkedin</a></li>
+            </my-links>
+        </my-footer>
+    </body>
+</html>

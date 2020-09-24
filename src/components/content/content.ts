@@ -20,50 +20,46 @@ import { LitElement, html, customElement, property, css } from 'lit-element';
  * @slot - This element has a slot
  * @csspart button - The button
  */
-@customElement('my-element')
-export class MyElement extends LitElement {
-  static styles = css`
+@customElement('my-content')
+export class MyContent extends LitElement {
+    static styles = css`
     :host {
-      display: block;
-      border: solid 1px gray;
-      padding: 16px;
-      max-width: 800px;
+      display: flex;
+      flex-direction: row;
+      border: solid 2px gray;
+      max-width: 100%;
     }
   `;
 
-  /**
-   * The name to say "Hello" to.
-   */
-  @property()
-  name = 'Alberto';
+    /**
+     * The name to say "Hello" to.
+     */
+    @property()
+    name = 'Alberto';
 
-  /**
-   * The number of times the button has been clicked.
-   */
-  @property({type: Number})
-  count = 0;
+    /**
+     * The number of times the button has been clicked.
+     */
+    @property({type: Number})
+    count = 0;
 
-  render() {
-    return html`
-      <h1>Hello, ${this.name}!</h1>
-      <button @click=${this._onClick} part="button">
-        Click Count: ${this.count}
-      </button>
-      <slot></slot>
+    render() {
+        return html`
+      <h1>Content</h1>
     `;
-  }
+    }
 
-  private _onClick() {
-    this.count++;
-  }
+    private _onClick() {
+        this.count++;
+    }
 
-  foo(): string {
-    return 'foo';
-  }
+    foo(): string {
+        return 'foo';
+    }
 }
 
 declare global {
-  interface HTMLElementTagNameMap {
-    'my-element': MyElement;
-  }
+    interface HTMLElementTagNameMap {
+        'my-content': MyContent;
+    }
 }
