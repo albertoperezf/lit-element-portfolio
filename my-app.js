@@ -8,6 +8,8 @@ import { LitElement, html, customElement, property } from "lit-element";
 import { router } from "lit-element-router";
 import "./components/app-link/app-link";
 import "./components/app-main/app-main";
+import './pages/home';
+import './pages/notfound';
 let App = class App extends LitElement {
     constructor() {
         super(...arguments);
@@ -24,14 +26,6 @@ let App = class App extends LitElement {
                 data: { title: "Home" }
             },
             {
-                name: "info",
-                pattern: "info"
-            },
-            {
-                name: "user",
-                pattern: "user/:id"
-            },
-            {
                 name: "not-found",
                 pattern: "*"
             }
@@ -46,16 +40,10 @@ let App = class App extends LitElement {
     }
     render() {
         return html `
-      <app-link href="/">Home</app-link>
-      <app-link href="/info">Info</app-link>
-      <app-link href="/info?data=12345">Info?data=12345</app-link>
-      <app-link href="/user/14">user/14</app-link>
-
-      <app-main active-route=${this.route}>
-        <h1 route="home">Home</h1>
-        <h1 route="info">Info</h1>
-        <h1 route="user">User</h1>
-        <h1 route="not-found">Not Found</h1>
+        <app-main active-route=${this.route}>
+            <app-home route="home" />
+      
+            <app-notfound route="not-found" />
       </app-main>
     `;
     }

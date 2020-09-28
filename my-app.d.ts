@@ -1,6 +1,8 @@
 import { LitElement } from "lit-element";
 import "./components/app-link/app-link";
 import "./components/app-main/app-main";
+import './pages/home';
+import './pages/notfound';
 declare class App extends LitElement {
     route: string;
     params: {};
