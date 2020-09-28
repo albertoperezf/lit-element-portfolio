@@ -63,14 +63,11 @@ export class TopBar extends LitElement {
   `;
 
     @property({ type: String }) name = 'Alberto Perez';
-    @property({ type: String }) imgSrc = 'https://picsum.photos/60/60?grayscale';
 
     render() {
         return html`
           <div class="wrapper" id="wrapper">
             <div class="images">
-                <img class="image" id="img" src="${this.imgSrc}" alt="">
-                
                 <p class="title">${this.name}</p>
             </div>
                 

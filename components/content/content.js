@@ -17,9 +17,14 @@ let MyContent = MyContent_1 = class MyContent extends LitElement {
     constructor() {
         super(...arguments);
         this.name = 'Alberto Perez Faria';
+        this.imgSrc = 'https://picsum.photos/200/200?grayscale';
     }
     render() {
         return html `<div class="wrapper">
+            <div class="wrapper-image">
+                <img class="image" id="img" src="${this.imgSrc}" alt="">
+            </div>
+
             <my-section description="${MyContent_1.description}" title="Resume" />
         </div>`;
     }
@@ -35,11 +40,28 @@ MyContent.styles = css `
         font-family: 'Roboto', sans-serif;
         margin: 0 10px;
     }
+    
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 30px auto auto auto;
+    }
+    
+    .image {
+        display: flex;
+        flex-direction: row;
+        border-radius: 50%;
+    }
   `;
 MyContent.description = 'Computer Engineer and Frontend Developer with more than four (4) years of experience working on agile development projects for web applications or mobile web applications using technologies like: HTML5, CSS3, SASS, LESS, PostCSS, Javascript, ES6, React, Angular, Meteor, Babel, Webpack, etc. Currently working on Bankia related projects using React architecture.';
 __decorate([
     property({ type: String })
 ], MyContent.prototype, "name", void 0);
+__decorate([
+    property({ type: String })
+], MyContent.prototype, "imgSrc", void 0);
 MyContent = MyContent_1 = __decorate([
     customElement('my-content')
 ], MyContent);

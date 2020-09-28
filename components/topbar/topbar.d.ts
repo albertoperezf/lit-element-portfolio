@@ -10,7 +10,6 @@ import '../link/link';
 export declare class TopBar extends LitElement {
     static styles: import("lit-element").CSSResult;
     name: string;
-    imgSrc: string;
     render(): import("lit-element").TemplateResult;
 }
 declare global {

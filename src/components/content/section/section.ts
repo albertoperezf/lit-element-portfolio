@@ -26,7 +26,17 @@ export class MySection extends LitElement {
         :host {
             display: flex;
             flex-direction: column; 
+            align-items: center;
+            justify-content: center;
         }    
+        
+        .wrapper {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+        }
     `;
 
     @property({ type: String }) title: string = '';

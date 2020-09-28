@@ -17,14 +17,11 @@ let TopBar = class TopBar extends LitElement {
     constructor() {
         super(...arguments);
         this.name = 'Alberto Perez';
-        this.imgSrc = 'https://picsum.photos/60/60?grayscale';
     }
     render() {
         return html `
           <div class="wrapper" id="wrapper">
             <div class="images">
-                <img class="image" id="img" src="${this.imgSrc}" alt="">
-                
                 <p class="title">${this.name}</p>
             </div>
                 
@@ -91,9 +88,6 @@ TopBar.styles = css `
 __decorate([
     property({ type: String })
 ], TopBar.prototype, "name", void 0);
-__decorate([
-    property({ type: String })
-], TopBar.prototype, "imgSrc", void 0);
 TopBar = __decorate([
     customElement('top-bar')
 ], TopBar);

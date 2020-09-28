@@ -53,7 +53,17 @@ MySection.styles = css `
         :host {
             display: flex;
             flex-direction: column; 
+            align-items: center;
+            justify-content: center;
         }    
+        
+        .wrapper {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+        }
     `;
 __decorate([
     property({ type: String })

@@ -10,6 +10,7 @@ export declare class MyContent extends LitElement {
     static styles: import("lit-element").CSSResult;
     static description: string;
     name: string;
+    imgSrc: string;
     render(): import("lit-element").TemplateResult;
 }
 declare global {
